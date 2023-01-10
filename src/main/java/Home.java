@@ -136,6 +136,11 @@ public class Home extends javax.swing.JFrame {
         });
 
         room2.setText("jButton1");
+        room2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                room2ActionPerformed(evt);
+            }
+        });
 
         room3.setText("jButton1");
 
@@ -695,6 +700,10 @@ public class Home extends javax.swing.JFrame {
     private void receiveRoom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_receiveRoom1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_receiveRoom1ActionPerformed
+
+    private void room2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_room2ActionPerformed
+        cardLayout.show(mainPanel,"room");
+    }//GEN-LAST:event_room2ActionPerformed
 
     /**
      * @param args the command line arguments
