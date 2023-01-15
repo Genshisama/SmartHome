@@ -7,6 +7,9 @@
       <Dimension value="[1000, 1000]"/>
     </Property>
   </Properties>
+  <AccessibilityProperties>
+    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="mainFrame"/>
+  </AccessibilityProperties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
@@ -63,13 +66,14 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="scrollRoom" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="28" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="homeTop" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="homeTop" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="scrollRoom" alignment="0" min="-2" pref="359" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -77,11 +81,11 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Component id="homeTop" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Component id="scrollRoom" min="-2" pref="464" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -93,9 +97,18 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="hiUser" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="hiUser" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                           <Component id="addRoom" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -110,6 +123,8 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                           <Component id="hiUser" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                       </Group>
@@ -143,6 +158,13 @@
                     <Property name="text" type="java.lang.String" value="Hi, [User]"/>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JLabel" name="jLabel1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="Integer.toString(rCount)&#xd;&#xa;" type="code"/>
+                    </Property>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JScrollPane" name="scrollRoom">
@@ -174,32 +196,34 @@
                               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="room1" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="room2" min="-2" pref="150" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="room4" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="room3" min="-2" pref="150" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="room5" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="room6" min="-2" pref="150" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="room7" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="room8" min="-2" pref="150" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
                                       <Component id="room9" min="-2" pref="150" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="room10" min="-2" pref="150" max="-2" attributes="0"/>
                                   </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="room5" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                          <Component id="room7" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="room6" min="-2" pref="150" max="-2" attributes="0"/>
+                                          <Component id="room8" min="-2" pref="150" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="room3" min="-2" pref="150" max="-2" attributes="0"/>
+                                          <Component id="room1" min="-2" pref="142" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="room4" min="-2" pref="150" max="-2" attributes="0"/>
+                                          <Component id="room2" min="-2" pref="150" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="29" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -207,14 +231,14 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="room1" alignment="3" min="-2" pref="84" max="-2" attributes="0"/>
-                                  <Component id="room2" alignment="3" min="-2" pref="84" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="room2" min="-2" pref="84" max="-2" attributes="0"/>
+                                  <Component id="room1" min="-2" pref="84" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="room4" alignment="3" min="-2" pref="84" max="-2" attributes="0"/>
                                   <Component id="room3" alignment="3" min="-2" pref="84" max="-2" attributes="0"/>
+                                  <Component id="room4" alignment="3" min="-2" pref="84" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -231,7 +255,7 @@
                                   <Component id="room9" alignment="3" min="-2" pref="84" max="-2" attributes="0"/>
                                   <Component id="room10" alignment="3" min="-2" pref="84" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="150" max="32767" attributes="0"/>
+                              <EmptySpace pref="165" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -240,14 +264,21 @@
                     <Component class="javax.swing.JButton" name="room1">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="room1"/>
+                        <Property name="horizontalTextPosition" type="int" value="0"/>
+                        <Property name="verticalAlignment" type="int" value="3"/>
+                        <Property name="verticalTextPosition" type="int" value="3"/>
                       </Properties>
                       <Events>
+                        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="room1StateChanged"/>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="room1ActionPerformed"/>
+                        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="room1PropertyChange"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="room2">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="room2"/>
+                        <Property name="horizontalTextPosition" type="int" value="0"/>
+                        <Property name="iconTextGap" type="int" value="0"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="room2ActionPerformed"/>
@@ -255,20 +286,20 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="room3">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="room3"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="room3ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="room4">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="room1"/>
+                        <Property name="text" type="java.lang.String" value="room4"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="room4ActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="room5">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="room1"/>
+                        <Property name="text" type="java.lang.String" value="room5"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="room5ActionPerformed"/>
@@ -276,12 +307,12 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="room6">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="room6"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="room7">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="room1"/>
+                        <Property name="text" type="java.lang.String" value="room7"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="room7ActionPerformed"/>
@@ -289,12 +320,12 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="room8">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="room8"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="room9">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="room1"/>
+                        <Property name="text" type="java.lang.String" value="room9"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="room9ActionPerformed"/>
@@ -302,7 +333,7 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="room10">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="room10"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -336,7 +367,7 @@
                               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                               <Component id="roomTop" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="scrollRoom1" pref="353" max="32767" attributes="0"/>
+                          <Component id="scrollRoom1" pref="325" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -362,15 +393,17 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace pref="80" max="32767" attributes="0"/>
+                                  <Component id="dispRoomName" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                   <Component id="Return" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="dispRoomName" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="addRoom1" min="-2" max="-2" attributes="0"/>
@@ -381,8 +414,16 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Return" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="Return" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                           <EmptySpace pref="7" max="32767" attributes="0"/>
                           <Component id="dispRoomName" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -439,6 +480,11 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ReturnActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="jLabel1"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -535,7 +581,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JButton" name="appliance1">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="lamp"/>
+                        <Property name="text" type="java.lang.String" value="lamp1"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="appliance1ActionPerformed"/>
@@ -543,12 +589,18 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="appliance2">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="bg" type="code"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="lamp2"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="appliance2ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="appliance3">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="lamp"/>
+                        <Property name="text" type="java.lang.String" value="lamp3"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="appliance3ActionPerformed"/>
@@ -556,12 +608,12 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="appliance4">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="lamp4"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="appliance5">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="lamp"/>
+                        <Property name="text" type="java.lang.String" value="lamp5"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="appliance5ActionPerformed"/>
@@ -569,17 +621,17 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="appliance6">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="lamp6"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="appliance7">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="lamp8"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="appliance8">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="lamp"/>
+                        <Property name="text" type="java.lang.String" value="lamp7"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="appliance8ActionPerformed"/>
@@ -587,7 +639,7 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="appliance9">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="lamp"/>
+                        <Property name="text" type="java.lang.String" value="lamp9"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="appliance9ActionPerformed"/>
@@ -595,7 +647,7 @@
                     </Component>
                     <Component class="javax.swing.JButton" name="appliance10">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="lamp10"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -622,20 +674,27 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="roomRegTop" alignment="1" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="receiveRoom" min="-2" pref="245" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="bed" min="-2" max="-2" attributes="0"/>
+                                  <Component id="receiveRoom" min="-2" pref="245" max="-2" attributes="0"/>
+                                  <Component id="bath" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="otherroom" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                               <Component id="cancelAdd" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                               <Component id="confirmAdd" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="78" max="32767" attributes="0"/>
+                      <EmptySpace pref="50" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="roomRegTop" alignment="1" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -644,12 +703,18 @@
                       <Component id="roomRegTop" max="32767" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="receiveRoom" min="-2" pref="70" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="bed" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="bath" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="otherroom" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="cancelAdd" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="confirmAdd" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="253" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -728,10 +793,28 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="confirm"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="confirmAddActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="cancelAdd">
               <Properties>
                 <Property name="text" type="java.lang.String" value="cancel"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="bed">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="bedroom"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="bath">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="bathroom"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="otherroom">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Others"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -754,12 +837,22 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                  <Component id="applianceTop" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="receiveRoom1" alignment="0" min="-2" pref="245" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="fan" min="-2" max="-2" attributes="0"/>
+                                  <Component id="receiveoutlet" alignment="0" min="-2" pref="245" max="-2" attributes="0"/>
+                                  <Component id="dispRoomName2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lamp" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="otherappliance" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ac" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                               <Component id="cancelAdd1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                               <Component id="confirmAdd1" min="-2" max="-2" attributes="0"/>
@@ -767,7 +860,6 @@
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
-                  <Component id="applianceTop" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -775,13 +867,23 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="applianceTop" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="33" max="32767" attributes="0"/>
-                      <Component id="receiveRoom1" min="-2" pref="70" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                      <Component id="receiveoutlet" min="-2" pref="70" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Component id="dispRoomName2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="fan" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lamp" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="ac" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="otherappliance" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="cancelAdd1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="confirmAdd1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="253" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -793,15 +895,16 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="13" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                  <Component id="dispRoomName2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="Return2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="Return2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="282" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                              <Component id="dispRoomName3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="66" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -809,21 +912,19 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="Return2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="12" max="32767" attributes="0"/>
-                          <Component id="dispRoomName2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="60" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace pref="72" max="32767" attributes="0"/>
+                              <Component id="dispRoomName3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="dispRoomName2">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="36" style="0"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Appliance Name:"/>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JButton" name="Return2">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -842,25 +943,73 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Return2ActionPerformed"/>
                   </Events>
                 </Component>
+                <Component class="javax.swing.JLabel" name="dispRoomName3">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="36" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Appliance Name:"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JTextField" name="receiveRoom1">
+            <Component class="javax.swing.JTextField" name="receiveoutlet">
               <Properties>
                 <Property name="text" type="java.lang.String" value="[ENTER APPLIANCE NAME]"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="receiveRoom1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="receiveoutletActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="confirmAdd1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="confirm"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="confirmAdd1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="cancelAdd1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="cancel"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="dispRoomName2">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="36" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Type:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="fan">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fan"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="lamp">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lamp"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lampActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="otherappliance">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Others"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="otherapplianceActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="ac">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="AC"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="acActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
